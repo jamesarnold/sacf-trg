@@ -15,3 +15,18 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::any('user/login', [
+	'as'	=> 'login',
+	'uses'	=> 'UserController@login'
+]);
+
+Route::any('user/register', [
+	'as'	=> 'register',
+	'uses'	=> 'UserController@register'
+]);
+
+Route::any('user/logout', [
+	'as'	=> 'logout',
+	'uses'	=> 'UserController@logout'
+]);
